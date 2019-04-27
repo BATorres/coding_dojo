@@ -7,6 +7,7 @@ import {UsuarioModule} from "./usuario/usuario.module";
 import {UsuarioEntity} from "./usuario/usuario.entity";
 import {SalaModule} from "./sala/sala.module";
 import {SalaEntity} from "./sala/sala.entity";
+import {WebSocketModule} from "./sala/websockets/websocket.module";
 
 @Module({
   imports: [
@@ -25,7 +26,8 @@ import {SalaEntity} from "./sala/sala.entity";
           dropSchema: true
       }),
       UsuarioModule,
-      SalaModule
+      SalaModule,
+      WebSocketModule
   ],
   controllers: [AppController],
   providers: [AppService],
